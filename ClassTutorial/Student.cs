@@ -29,9 +29,15 @@ namespace ClassTutorial
             }
         }
 
-        public void Print() //can pass parameters in here if need/want
+        public string Print(int code) //can pass parameters in here if need/want, int code is a parameter
+                //^^ does the method return a value? void = no type = yes, of that type, print returns a string here
+                //if void, can't put on right side of =
+
+
         {
-            Console.WriteLine($"name:{this.Name} sat:{this.SAT}"); //will print whatever we put in as name for student
+            //can also do var msg = $"code:{code} name:{this.Name} sat:{this.SAT}";
+            //return msg;
+            return $"code:{code} name:{this.Name} sat:{this.SAT}"; //will print whatever we put in as name for student
                                           //when inside your class and referencing property from inside, use this. to reference what accessing
                                           //usually "this" is optional as long as they know what you're referring to (usually fine unless duplicates)
         }
